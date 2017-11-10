@@ -22,6 +22,10 @@ mongoose.connect(
   }
 );
 
+app.get('*', function(req, res) {
+    res.sendFile("index.html");
+});
+
 // Start the API server
 app.listen(PORT, function() {
   console.log(`NYT Server now listening on PORT ${PORT}!`);
