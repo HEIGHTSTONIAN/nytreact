@@ -23,7 +23,7 @@ mongoose.connect(
 );
 
 app.get('*', function(req, res) {
-    res.sendFile("index.html");
+    res.sendFile(path.join(__dirname, "/build/index.html"));
 });
 
 // Start the API server
